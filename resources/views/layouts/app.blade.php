@@ -12,12 +12,25 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Font for Site-->
+    <link href="{{ asset('css/fontSite.css') }}" rel="stylesheet" >
+
+    <style type="text/css">
+        #headerSpotlight{
+            background-color: #ff5722; 
+            color: #fff;
+        }
+        #imageSpotlight{
+            border: 1px solid #BDBDBD;
+            width: 200px;
+            height: 150px;
+            border-radius: 3px;
+        }
+    </style>
+
 </head>
 <body>
     <div id="app">
