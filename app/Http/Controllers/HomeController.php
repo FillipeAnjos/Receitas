@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; // serve para pegar o id, email e nome do login
+use Illuminate\Support\Facades\DB;//Import DB usado para fazer query's DB's ... Ex: DB::table('produtos')->where('categoria', 'biblia')
 
 class HomeController extends Controller
 {
@@ -25,4 +27,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+
 }

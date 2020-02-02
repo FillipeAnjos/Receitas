@@ -11,9 +11,13 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('index');
 });
+*/
+
+Route::get('/', 'IndexController@pageInitial')->name('/');
 
 /*
 Route::get('/', function () {

@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Lato-Light';
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	src: url("/fonts/lato/Lato-Light.ttf") format("truetype");
+}
+body {
+	font-family: Lato-Light, sans-serif;
+}
