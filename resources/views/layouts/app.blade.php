@@ -19,8 +19,28 @@
     <link href="{{ asset('css/fontSite.css') }}" rel="stylesheet" >
 
     <style type="text/css">
+        #footerCoral{
+            color: #fff;
+            background-color: #ff6a28;
+            /*height: 300px;*/
+        }
+        #textCategoryFooter{
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+        }
+        #textCategoryFooter:hover{
+            color: #D8D8D8;
+        }
+        #footerGray{
+            background-color: #E6E6E6;
+            height: 50px;
+            margin-top: -14px;
+            margin-bottom: -14px;
+        }
+
         #headerSpotlight{
-            background-color: #ff5722; 
+            background-color: #ff6a28; 
             color: #fff;
         }
         #imageSpotlight{
@@ -28,7 +48,22 @@
             width: 200px;
             height: 150px;
             border-radius: 3px;
+            margin-left: 3px;
         }
+
+        #heartIcon{
+            width: 19px;
+        }
+        .heartIconAndText {
+            margin-top: -15px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .textIconFavorito{
+            margin-left: 2px;
+        }
+
+        
     </style>
 
 </head>
@@ -113,6 +148,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer>
+            @include('footer')
+        </footer>
     </div>
 </body>
 </html>
