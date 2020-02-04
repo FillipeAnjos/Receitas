@@ -15,6 +15,7 @@
 
         <div class="col-md-12">
             <br/>
+            <h4>Destaques</h4>
             <div class="container">
               <div class="row">
                 <div class="col-sm">
@@ -25,6 +26,14 @@
                         <img src="{{ $receita[0]->img }}" id="imageSpotlight">
 
                     </div>
+
+                    <center>
+                        <div class="heartIconAndText">
+                            <img src="{{ URL::asset('/icons/png/iconsAvulsos/heart-icon.png') }}" id="heartIcon" alt="Favorito">
+                            <span class="textIconFavorito">{{ $receita[0]->favorito }}</span>
+                        </div>
+                    </center>
+
                   </div>
                 </div>
                 <div class="col-sm">
@@ -35,6 +44,14 @@
                         <img src="{{ $receita[1]->img }}" id="imageSpotlight">
 
                     </div>
+
+                    <center>
+                        <div class="heartIconAndText">
+                            <img src="{{ URL::asset('/icons/png/iconsAvulsos/heart-icon.png') }}" id="heartIcon" alt="Favorito">
+                            <span class="textIconFavorito">{{ $receita[1]->favorito }}</span>
+                        </div>
+                    </center>
+
                   </div>
                 </div>
                 <div class="col-sm">
@@ -45,6 +62,14 @@
                         <img src="{{ $receita[2]->img }}" id="imageSpotlight">
 
                     </div>
+
+                    <center>
+                        <div class="heartIconAndText">
+                            <img src="{{ URL::asset('/icons/png/iconsAvulsos/heart-icon.png') }}" id="heartIcon" alt="Favorito">
+                            <span class="textIconFavorito">{{ $receita[2]->favorito }}</span>
+                        </div>
+                    </center>
+
                   </div>
                 </div>
                 <div class="col-sm">
@@ -55,6 +80,14 @@
                         <img src="{{ $receita[3]->img }}" id="imageSpotlight">
 
                     </div>
+
+                    <center>
+                        <div class="heartIconAndText">
+                            <img src="{{ URL::asset('/icons/png/iconsAvulsos/heart-icon.png') }}" id="heartIcon" alt="Favorito">
+                            <span class="textIconFavorito">{{ $receita[3]->favorito }}</span>
+                        </div>
+                    </center>
+
                   </div>
                 </div>
               </div>
@@ -64,7 +97,7 @@
         <div class="col-md-12">
             <br/>
             <div class="card">
-                <div class="card-header">Index</div>
+                <div class="card-header">...</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -73,7 +106,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    ... ... ...
                 </div>
             </div>
         </div>
