@@ -96,6 +96,27 @@
 
         <div class="col-md-12">
             <br/>
+            <h4>Receitas Práticas</h4>
+            <h5>
+                <center>
+                    Aprenda a fazer receitas gostosas e o melhor muito práticas!
+                </center>
+            </h5>
+
+
+            <!-- 
+
+                    
+                    Receitasssssssss !
+
+
+            -->
+
+
+        </div>
+
+        <div class="col-md-12">
+            <br/>
             <div class="card">
                 <div class="card-header">...</div>
 
