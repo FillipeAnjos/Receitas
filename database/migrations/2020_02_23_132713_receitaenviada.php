@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class Receitaenviada extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('receitaenviada', function(Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('name', 100);
-            $table->string('email', 100)->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password', 100);
+            $table->string('titulo', 100);
+            $table->string('categoria', 100);
+            $table->integer('tempoPreparo');
+            $table->integer('quantidade');
+            $table->string('microondas', 5);
+            $table->longText('ingredientes');
+            $table->longText('preparo');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -31,6 +34,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('receitaenviada');
     }
 }
