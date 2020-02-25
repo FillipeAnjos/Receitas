@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use Session;// import!! para poder manipular sessões
+
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
 class Authenticate extends Middleware
@@ -15,6 +17,9 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
+
+            Session::flash('disconnected', 'Favor logue-se para continuar!');
+
             return route('login');
         }
     }

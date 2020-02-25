@@ -15,6 +15,8 @@ class Receitaenviada extends Migration
     {
         Schema::create('receitaenviada', function(Blueprint $table){
             $table->bigIncrements('id');
+            $table->string('nome', 100);
+            $table->string('email', 100);
             $table->string('titulo', 100);
             $table->string('categoria', 100);
             $table->integer('tempoPreparo');
