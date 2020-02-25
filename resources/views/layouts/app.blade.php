@@ -39,6 +39,7 @@
             margin-bottom: -14px;
         }
 
+        /* Index */
         #headerSpotlight{
             background-color: #ff6a28; 
             color: #fff;
@@ -63,6 +64,20 @@
             margin-left: 2px;
         }
 
+        /* Enviar Receita */
+        #headerGray{
+            background-color: #BDBDBD;
+            color: #fff;
+            font-size: 18px;
+            height: 30px;
+        }
+        #bodyContainer{
+            background-color: #F2F2F2;
+        }
+        #buttonSendRecipe{
+            background-color: #ff6a28;
+            color: #fff;
+        }
         
     </style>
 
@@ -93,7 +108,7 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <img src="{{ URL::asset('/icons/png/32px/0039-file-text2.png') }}" width="23px" class="img-fluid" alt="Enviar Receita">
                                 <b>
-                                    <a class="nav-link" href="">{{ __('ENVIA SUA RECEITA') }}</a>
+                                    <a class="nav-link" href="{{ url('/menu/enviarReceita') }}">{{ __('ENVIA SUA RECEITA') }}</a>
                                 </b>
                             </li>
 
@@ -116,23 +131,38 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+
+                            <li class="nav-item">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src="{{ URL::asset('/icons/png/32px/0039-file-text2.png') }}" width="23px" class="img-fluid" alt="Enviar Receita">
                                 <b>
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
+                                    <a class="nav-link" href="{{ url('/menu/enviarReceita') }}">{{ __('ENVIA SUA RECEITA') }}</a>
                                 </b>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src="{{ URL::asset('/icons/png/32px/0114-user.png') }}" width="23px" class="img-fluid" alt="Enviar Receita">
+
+                                    
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <b>{{ strtoupper(Auth::user()->name) }}</b> <span class="caret"></span>
+                                    </a>
+                                                                    
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <!--   
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <img src="{{ URL::asset('/icons/png/32px/0277-exit.png') }}" width="23px" class="img-fluid" alt="home">
-                                    <b>
+                                -->
+                                    
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
-                                    </b>
+                                    
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

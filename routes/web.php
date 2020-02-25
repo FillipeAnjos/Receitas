@@ -28,3 +28,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'menu'], function (){
+     Route::get('enviarReceita', ['uses' => 'EnviarReceitaController@sendRecipePage']);
+});
+
+Route::post('/sendRecipe', 'EnviarReceitaController@sendRecipe')->name('sendRecipe');
+
+
