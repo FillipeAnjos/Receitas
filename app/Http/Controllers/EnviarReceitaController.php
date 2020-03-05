@@ -23,8 +23,7 @@ class EnviarReceitaController extends Controller
     }
 
     public function sendRecipePage(){
-
-    	return view('recipe/sendRecipePage');
+        return view('recipe/sendRecipePage');
     }
 
     public function sendRecipe(Request $request){

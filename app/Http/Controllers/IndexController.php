@@ -29,5 +29,10 @@ class IndexController extends Controller
         return view('index', compact('receita')); 
     }
 
+    public function contato(){
+        
+        return view('contato');
+    }
+
 
 }
