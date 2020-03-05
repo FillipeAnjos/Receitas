@@ -31,8 +31,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'menu'], function (){
      Route::get('enviarReceita', ['uses' => 'EnviarReceitaController@sendRecipePage']);
+     Route::get('contato', ['uses' => 'IndexController@contato']);
 });
 
 Route::post('/sendRecipe', 'EnviarReceitaController@sendRecipe')->name('sendRecipe');
+Route::post('/contact', 'ContactController@contact')->name('contact');
 
 

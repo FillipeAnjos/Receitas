@@ -105,7 +105,22 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src="{{ URL::asset('/icons/png/32px/0039-file-text2.png') }}" width="23px" class="img-fluid" alt="Enviar Receita">
+                                <b>
+                                    <a class="nav-link" href="{{ url('/menu/contato') }}">{{ __('CONTATO') }}</a>
+                                </b>
+                            </li>
+
+
+
+
+
+
+
+
+                            <li class="nav-item">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <img src="{{ URL::asset('/icons/png/32px/0039-file-text2.png') }}" width="23px" class="img-fluid" alt="Enviar Receita">
                                 <b>
                                     <a class="nav-link" href="{{ url('/menu/enviarReceita') }}">{{ __('ENVIA SUA RECEITA') }}</a>
@@ -131,6 +146,14 @@
                                 </li>
                             @endif
                         @else
+
+                            <li class="nav-item">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src="{{ URL::asset('/icons/png/32px/0039-file-text2.png') }}" width="23px" class="img-fluid" alt="Enviar Receita">
+                                <b>
+                                    <a class="nav-link" href="{{ url('/menu/contato') }}">{{ __('CONTATO') }}</a>
+                                </b>
+                            </li>
 
                             <li class="nav-item">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
