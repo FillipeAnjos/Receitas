@@ -18,6 +18,8 @@ isso disponibilizado aqui.
 Para clonar esse projeto e ter um melhor aproveitamento das suas funcionalidades será necessário a instalação do composer juntamente 
 com Laravel o que é simples e pode ser obtida facilmente na documentação do próprio Laravel ou se preferir poderá encontrar 
 conteúdo sobre na internet.
+<br/>
+Apois feita a instalação do composer, do Laravel e tiver clonado o projeto, deverá seguir para a criação do banco e das migrations. 
 
 <h2>Ferramentas</h2>
 As tecnologias utilizada para a criação da aplicação foi o uso do framework Laravel como linguagem de programação PHP, usando os 
