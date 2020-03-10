@@ -78,6 +78,11 @@
             background-color: #ff6a28;
             color: #fff;
         }
+
+        /* View Bolos Footer */
+        #imgFooterCategory{
+            border-radius: 25px;
+        }
         
     </style>
 

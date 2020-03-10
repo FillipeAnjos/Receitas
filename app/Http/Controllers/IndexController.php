@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth; // serve para pegar o id, email e nome do l
 use Illuminate\Support\Facades\DB;//Import DB usado para fazer query's DB's ... Ex: DB::table('produtos')->where('categoria', 'biblia')
 use App\ReceitaModel;
 
+use App\Services\FolderService;
+
 class IndexController extends Controller
 {
     
@@ -26,12 +28,18 @@ class IndexController extends Controller
                 $receita[] = $res;
             }
 
-        return view('index', compact('receita')); 
+        $conditionPage = "index";
+        $folder = FolderService::checkDateFolder($conditionPage);
+
+        return view('index', compact('receita', 'folder')); 
     }
 
     public function contato(){
+
+        $conditionPage = "contato";
+        $folder = FolderService::checkDateFolder($conditionPage);
         
-        return view('contato');
+        return view('contato', compact('folder'));
     }
 
 

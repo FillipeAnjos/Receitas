@@ -37,4 +37,7 @@ Route::group(['prefix' => 'menu'], function (){
 Route::post('/sendRecipe', 'EnviarReceitaController@sendRecipe')->name('sendRecipe');
 Route::post('/contact', 'ContactController@contact')->name('contact');
 
+Route::group(['prefix' => 'footer'], function(){
+	Route::get('bolos', ['uses' => 'FooterController@toViewBolos']);
+});
 

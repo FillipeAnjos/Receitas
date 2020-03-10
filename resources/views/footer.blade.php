@@ -11,7 +11,7 @@
                         <p>
                             <a href="" id="textCategoryFooter">Todas</a>
                             <br/>
-                            <a href="" id="textCategoryFooter">Bolos</a>
+                            <a href="/footer/bolos" id="textCategoryFooter">Bolos</a>
                             <br/>
                             <a href="" id="textCategoryFooter">Tortas</a>
                             <br/>
