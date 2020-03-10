@@ -8,7 +8,8 @@
     <div class="row justify-content-center">
 
     	<div class="col-md-12">
-            <img src="{{ URL::asset('/imagens/tortaMorango.png') }}" class="img-fluid">
+            <!--<img src="{{ URL::asset('/imagens/folder/tortaMorango.png') }}" class="img-fluid">-->
+            <img src="{{ $folder }}" class="img-fluid">
         </div>
 
         <div class="col-md-12">

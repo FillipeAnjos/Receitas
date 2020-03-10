@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth; // serve para pegar o id, email e nome do l
 
 use Session;
 use App\ContactModel;
+use App\Services\FolderService;
 
 class ContactController extends Controller
 {
@@ -35,7 +36,10 @@ class ContactController extends Controller
     		Session::flash('ContactError', 'Desculpe. Ocorreu um erro ao enviar o seu contato. Contate o Administrador!');
     	}
 
-    	return view('contato');
+    	$conditionPage = "contato";
+        $folder = FolderService::checkDateFolder($conditionPage);
+        
+        return view('contato', compact('folder'));
     }
 
 

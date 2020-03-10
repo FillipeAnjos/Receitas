@@ -5,7 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <h2>Site de Receitas</h2>
-            <img src="{{ URL::asset('/imagens/tortaMorango.png') }}" class="img-fluid">
+            <!--<img src="{{ URL::asset('/imagens/folder/tortaMorango.png') }}" class="img-fluid">-->
+            <img src="{{ $folder }}" class="img-fluid">
             <!-- 
                 Site Modelo --- https://cybercook.com.br/
                 Index.php

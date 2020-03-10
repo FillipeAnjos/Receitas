@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth; // serve para pegar o id, email e nome do l
 
 use Session;
 use App\ReceitaEnviarModel;
+use App\Services\FolderService;
 
 class EnviarReceitaController extends Controller
 {
@@ -23,7 +24,11 @@ class EnviarReceitaController extends Controller
     }
 
     public function sendRecipePage(){
-        return view('recipe/sendRecipePage');
+
+        $conditionPage = "sendRecipePage";
+        $folder = FolderService::checkDateFolder($conditionPage);
+        
+        return view('recipe/sendRecipePage', compact('folder'));
     }
 
     public function sendRecipe(Request $request){
@@ -49,7 +54,10 @@ class EnviarReceitaController extends Controller
     		Session::flash('RecipeError', 'Ocorreu um erro ao enviar a receita. Contate o Administrador!');
     	}
 
-    	return view('recipe/sendRecipePage');
+        $conditionPage = "sendRecipePage";
+        $folder = FolderService::checkDateFolder($conditionPage);
+
+    	return view('recipe/sendRecipePage', compact('folder'));
 
     	//Auth::id()
     	//Auth::user()->id
